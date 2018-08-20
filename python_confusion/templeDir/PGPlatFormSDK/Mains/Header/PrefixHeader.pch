@@ -1,0 +1,20 @@
+//
+//  PGSDKPrefixHeader.pch
+//  PGPlatFormSDK
+//
+//  Created by Baird-weng on 2018/6/2.
+//  Copyright © 2018年 Baird-weng. All rights reserved.
+//
+
+#ifndef PGSDKPrefixHeader_pch
+#define PGSDKPrefixHeader_pch
+#import "WKStrongTakeBwEAGLLayer.h"
+#import "WKExponentFindKhScreenshot.h"
+#import "WKWriteVitalLmDrawingContext.h"
+#import "WKSumWarningUlEmitterCell.h"
+#import "Header.h"
+#define PGPSDKAUTOLOGIN @"pgpsdkautologin"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PGSDKPrefixHeader_pch */

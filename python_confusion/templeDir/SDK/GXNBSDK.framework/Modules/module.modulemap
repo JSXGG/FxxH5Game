@@ -1,0 +1,4 @@
+framework module GXNBSDK {
+    header "GXNBSDK-Swift.h"
+    requires objc
+}
