@@ -13,7 +13,7 @@ import Packaging
 
 # 需要处理的工程目录。
 
-ys_pro_dir = '../iOS_Product/PGPlatFormSDK'
+ys_pro_dir = '../iOS_Product/fxxproject'
 
 pro_root_dir = ''
 
@@ -23,32 +23,18 @@ pro_root_dir = ''
 pro_qz_str = helper.getRandomStrWithOption(2, -1).upper()
 
 # 过滤的类。
-filterClassNames = ['AppDelegate', 'ViewController']
+filterClassNames = ['AppDelegate']
 
-# 过滤的目录。
-filterClassDirs = ['AFNetworking',
-                   'Helper'
-                   'Base64',
-                   'MJCSMassonry',
-                   'MJFDFullscreenPopGesture',
-                   'MJSVProgressHUD',
-                   'NJKWebViewProgress',
-                   'Reachability']
-
-# 过滤的目录，页游平台手游SDK版
-filterClassDirs = ['PGFIQKKeyboardManager',
-                   'PGPFSVProgressHUD',
-                   'Base64',
-                   'IOPSAFFNetworking',
-                   'SBJson',
-                   'SSXMMasonry',
-                   'Header']
-
-filterClassDirs = ['PGFIQKKeyboardManager',
-                   'SSXMMasonry',
-                   'IOPSAFFNetworking',
-                   'SBJson',
-                   'Header']
+filterClassDirs = ['MBProgressHUD',
+                   'AFNetworking',
+                   'MJExtension',
+                   'IQKeyboardManager',
+                   'Categories',
+                   'Constants',
+                   'IQTextView',
+                   'IQToolbar',
+                   'Resources',
+                   'Base64']
 
 
 def getClassName():
@@ -67,7 +53,6 @@ def getPathLastDir(path):
 
 
 def start(rootDir):
-
     global pro_root_dir
     if (os.path.exists(rootDir) == False):
         return
@@ -83,13 +68,13 @@ def start(rootDir):
 
     start2(pro_root_dir)
 
-    newSDKName = helper.getRandomStrWithOption(4, 1) + 'SDK'
+    # newSDKName = helper.getRandomStrWithOption(4, 1) + 'SDK'
 
-    changeFrameWorkName('PGSDK', newSDKName)
-    changeBundleName(newSDKName)
-    changeSDKFeference(pro_root_dir, 'PGSDK', newSDKName)
+    # changeFrameWorkName('PGSDK', newSDKName)
+    # changeBundleName(newSDKName)
+    # changeSDKFeference(pro_root_dir, 'PGSDK', newSDKName)
     # 打包SDK。
-    Packaging.start(pro_root_dir, newSDKName)
+    # Packaging.start(pro_root_dir, newSDKName)
 
     # 归档。
 
@@ -162,6 +147,8 @@ def changeClassName(pathname, oldFileName, newFileName):
         os.rename(oldPath + '.h', newPath + '.h')
     if os.path.exists(oldPath + '.m'):
         os.rename(oldPath + '.m', newPath + '.m')
+    if os.path.exists(oldPath + '.xib'):
+        os.rename(oldPath + '.xib', newPath + '.xib')
     if os.path.exists(oldPath + '.swift'):
         os.rename(oldPath + '.swift', newPath + '.swift')
 
@@ -212,6 +199,7 @@ def changeXcodepro(proj_path, oldName, newName):
         xcontent = f.read()
         xcontent = re.sub(r'\b' + oldName + r'.h\b', newName + '.h', xcontent)
         xcontent = re.sub(r'\b' + oldName + r'.m\b', newName + '.m', xcontent)
+        xcontent = re.sub(r'\b' + oldName + r'.xib\b', newName + '.xib', xcontent)
         xcontent = re.sub(r'\b' + oldName + r'.swift\b', newName + '.swift', xcontent)
         print('混淆:' + oldName + '------------>' + newName)
     with open(proj_path, "w", encoding="utf-8") as f:
@@ -223,7 +211,8 @@ def changeFeference(rootDir, oldName, newName):
     for filename in os.listdir(rootDir):
         pathname = os.path.join(rootDir, filename)
         if (os.path.isfile(pathname)):
-            if ('.h' in pathname) or ('.m' in pathname) or ('.pch' in pathname) or ('.swift' in pathname):
+            if ('.h' in pathname) or ('.m' in pathname) or ('.pch' in pathname) or ('.swift' in pathname) or (
+                    '.xib' in pathname) or ('.storyboard' in pathname):
                 content = ""
                 with open(pathname, "r", encoding="utf-8") as f:
                     content = f.read()
