@@ -36,7 +36,7 @@
     
     NSDictionary *Par =@{@"appName":appName,@"bundleIdentifier":bundleidentifier,@"needURL":needURL};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/regisdevicebygame",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/regisdevicebygame",addressurl]
                          parameters:Par
                                view:view
                             success:^(id responseObject)
@@ -66,7 +66,7 @@
     
     NSDictionary *Par =@{@"userName":userName,@"passWord":passWord};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/signup",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/signup",addressurl]
                          parameters:Par
                                view:view
                             success:^(id responseObject)
@@ -97,7 +97,7 @@
     
     NSDictionary *Par =@{@"userName":userName,@"passWord":passWord};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/gamelogin",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/gamelogin",addressurl]
                          parameters:Par
                                view:view
                             success:^(id responseObject)

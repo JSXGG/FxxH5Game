@@ -10,7 +10,7 @@
 #import "ZSHTTPManager.h"
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
-
+#import "CSAESTooL.h"
 @implementation ZSNetTool
 
 + (instancetype)sharedInstance {
@@ -25,15 +25,20 @@
 - (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters view:(UIView *)view success:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
     if (view) {
-    
         [MBProgressHUD showMessag:@"" toView:view];
     }
-    __weak typeof (self) weakSelf = self;
-    [[ZSHTTPManager sharedPostManager] POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSMutableDictionary *n_parameters = [[NSMutableDictionary alloc]init];
+    NSString *jm_data = [CSAESTooL hx_encryptWithIV:@"1234567890123457" withString:[parameters mj_JSONString]];
+    [n_parameters setObject:jm_data forKey:@"data"];
+    [[ZSHTTPManager sharedPostManager] POST:URLString parameters:n_parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (view) {
             [MBProgressHUD hideAllHUDsForView:view animated:YES];
         }
         if (success) {
+            if(responseObject&&[responseObject objectForKey:@"data"]){
+                responseObject = [CSAESTooL hx_decodeWithIV:@"1234567890123457" withString:[responseObject objectForKey:@"data"]];
+                responseObject = [responseObject mj_JSONObject];
+            }
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

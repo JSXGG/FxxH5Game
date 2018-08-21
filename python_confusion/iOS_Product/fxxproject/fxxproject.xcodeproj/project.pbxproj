@@ -60,6 +60,9 @@
 		3AD0A1CF2118876600F1DC31 /* RegViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD0A1CE2118876600F1DC31 /* RegViewModel.m */; };
 		3AD0A1D221188A0A00F1DC31 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD0A1D121188A0A00F1DC31 /* LoginView.m */; };
 		3AD0A1D421188A1A00F1DC31 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD0A1D321188A1A00F1DC31 /* LoginView.xib */; };
+		99CC1A0D212BB045009DB8DE /* CSAESTooL.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC1A09212BB044009DB8DE /* CSAESTooL.m */; };
+		99CC1A0E212BB045009DB8DE /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC1A0C212BB045009DB8DE /* NSData+AES.m */; };
+		99CC1A13212BB086009DB8DE /* CSGTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC1A11212BB086009DB8DE /* CSGTMBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +195,13 @@
 		99B98EF821241A91008178E5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		99B98EF921241A94008178E5 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
 		99B98EFA21241A94008178E5 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		99CC1A09212BB044009DB8DE /* CSAESTooL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAESTooL.m; sourceTree = "<group>"; };
+		99CC1A0A212BB044009DB8DE /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		99CC1A0B212BB044009DB8DE /* CSAESTooL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAESTooL.h; sourceTree = "<group>"; };
+		99CC1A0C212BB045009DB8DE /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		99CC1A10212BB086009DB8DE /* CSGTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGTMBase64.h; sourceTree = "<group>"; };
+		99CC1A11212BB086009DB8DE /* CSGTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGTMBase64.m; sourceTree = "<group>"; };
+		99CC1A12212BB086009DB8DE /* CSGTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGTMDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +341,11 @@
 		3A0DE997211B0B6700DC0497 /* Too */ = {
 			isa = PBXGroup;
 			children = (
+				99CC1A0F212BB086009DB8DE /* Base64 */,
+				99CC1A0B212BB044009DB8DE /* CSAESTooL.h */,
+				99CC1A09212BB044009DB8DE /* CSAESTooL.m */,
+				99CC1A0A212BB044009DB8DE /* NSData+AES.h */,
+				99CC1A0C212BB045009DB8DE /* NSData+AES.m */,
 				3A0DE99E211B0C1300DC0497 /* NSDictionary+safeGet.h */,
 				3A0DE99C211B0C1300DC0497 /* NSDictionary+safeGet.m */,
 				3A0DE99D211B0C1300DC0497 /* ZSHTTPManager.h */,
@@ -621,6 +636,16 @@
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
+		99CC1A0F212BB086009DB8DE /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				99CC1A10212BB086009DB8DE /* CSGTMBase64.h */,
+				99CC1A11212BB086009DB8DE /* CSGTMBase64.m */,
+				99CC1A12212BB086009DB8DE /* CSGTMDefines.h */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -780,6 +805,7 @@
 				3AD0A1962118848800F1DC31 /* main.m in Sources */,
 				3A0DE990211B0B4500DC0497 /* IQTextView.m in Sources */,
 				3AD0A1CF2118876600F1DC31 /* RegViewModel.m in Sources */,
+				99CC1A0D212BB045009DB8DE /* CSAESTooL.m in Sources */,
 				3A0DE9A1211B0C1400DC0497 /* NSDictionary+safeGet.m in Sources */,
 				3A0DE99A211B0BA300DC0497 /* FxxNetwork.m in Sources */,
 				3A0DE984211B0B4500DC0497 /* AFSecurityPolicy.m in Sources */,
@@ -787,6 +813,7 @@
 				3ABAE062211B17390076F155 /* NSString+MJExtension.m in Sources */,
 				3A0DE993211B0B4500DC0497 /* IQTitleBarButtonItem.m in Sources */,
 				3A908550211B2F7D006290FD /* LoginModel.m in Sources */,
+				99CC1A0E212BB045009DB8DE /* NSData+AES.m in Sources */,
 				3AD0A1882118848600F1DC31 /* AppDelegate.m in Sources */,
 				3ABAE05E211B17390076F155 /* NSObject+MJClass.m in Sources */,
 				3A0DE988211B0B4500DC0497 /* IQNSArray+Sort.m in Sources */,
@@ -798,6 +825,7 @@
 				3A0DE986211B0B4500DC0497 /* AFURLResponseSerialization.m in Sources */,
 				3ABAE05B211B17390076F155 /* MJProperty.m in Sources */,
 				3ABAE061211B17390076F155 /* NSObject+MJProperty.m in Sources */,
+				99CC1A13212BB086009DB8DE /* CSGTMBase64.m in Sources */,
 				3A0DE987211B0B4500DC0497 /* AFURLSessionManager.m in Sources */,
 				3A0DE98A211B0B4500DC0497 /* IQUITextFieldView+Additions.m in Sources */,
 				3A0DE98C211B0B4500DC0497 /* IQUIViewController+Additions.m in Sources */,
