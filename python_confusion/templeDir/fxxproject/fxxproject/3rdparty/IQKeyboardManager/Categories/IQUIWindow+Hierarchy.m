@@ -30,10 +30,10 @@
 {
     UIViewController *topController = [self rootViewController];
     
-    //  Getting topMost TRRouteAllowTrModel
+    //  Getting topMost ZXTranslateSpecificGpViewController
     while ([topController presentedViewController])	topController = [topController presentedViewController];
 	
-    //  Returning topMost TRRouteAllowTrModel
+    //  Returning topMost ZXTranslateSpecificGpViewController
     return topController;
 }
 

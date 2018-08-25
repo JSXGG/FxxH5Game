@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TRChangeEliminateMjViewController.h"
+#import "ZXSlideSpecificFfFaceFeature.h"
 @interface AppDelegate ()
 
 @end

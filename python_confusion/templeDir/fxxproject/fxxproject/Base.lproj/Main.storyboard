@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-816" y="178"/>
         </scene>
-        <!--View Controller-->
+        <!--Translate Specific Gp View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TRRouteAllowTrModel" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ZXTranslateSpecificGpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tWn-VV-7oS"/>
                         <viewControllerLayoutGuide type="bottom" id="XHs-Th-LmW"/>
@@ -60,6 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="showView" width="621" height="1104"/>
+        <image name="showView" width="375" height="667"/>
     </resources>
 </document>
