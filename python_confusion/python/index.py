@@ -17,9 +17,6 @@ ys_pro_dir = '../iOS_Product/fxxproject'
 
 pro_root_dir = ''
 
-# pro_root_dir = '../iOS_Product/MJProduct/DSDKsiPFfeAmf/DSDKsiPFfeAmf/Mains/GameSDK/MainFunction/'
-# pro_root_dir = '../iOS_Product/HunXiao'
-# 前缀。
 pro_qz_str = helper.getRandomStrWithOption(2, -1).upper()
 
 # 过滤的类。
