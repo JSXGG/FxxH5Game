@@ -8,7 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#define addressurl @"https://xggserve.com/xgg"
+#import "codeObfuscation.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD+Add.h"
 #import "FxxNetwork.h"

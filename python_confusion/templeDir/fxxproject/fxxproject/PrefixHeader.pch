@@ -11,7 +11,7 @@
 #define addressurl @"https://xggserve.com/xgg"
 #import "AFNetworking.h"
 #import "MBProgressHUD+Add.h"
-#import "ZXArchiveVowelJgDisplayLink.h"
+#import "BRContainLeadingNpLabel.h"
 #import "MJExtension.h"
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height

@@ -19,6 +19,6 @@
  tag (0注册 1 忘记密码 2登录)
  */
 @property (copy,nonatomic) void(^btnsenderblock)(NSInteger index);
--(void)changeloginviewheight:(BOOL )isshow;
+-(void)hx_changeloginviewheight:(BOOL )isshow;
 
 @end

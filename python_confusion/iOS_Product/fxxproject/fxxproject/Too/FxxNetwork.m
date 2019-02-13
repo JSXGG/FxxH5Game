@@ -7,6 +7,7 @@
 //
 
 #import "FxxNetwork.h"
+#import "CSAESTooL.h"
 #import "NSDictionary+safeGet.h"
 @implementation FxxNetwork
 + (instancetype)sharedInstance {
@@ -36,7 +37,7 @@
     
     NSDictionary *Par =@{@"appName":appName,@"bundleIdentifier":bundleidentifier,@"needURL":needURL};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/regisdevicebygame",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/regisdevicebygame",[self hx_getHost]]
                          parameters:Par
                                view:view
                             success:^(id responseObject)
@@ -66,7 +67,7 @@
     
     NSDictionary *Par =@{@"userName":userName,@"passWord":passWord};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/signup",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/signup",[self hx_getHost]]
                          parameters:Par
                                view:view
                             success:^(id responseObject)
@@ -89,7 +90,7 @@
  @param success 成功回调
  @param failure 失败回调
  */
--(void)gamelogin:(NSString *)userName
+-(void)hx_gamelogin:(NSString *)userName
         passWord:(NSString *)passWord
             view:(UIView *)view
          success:(void (^)(id data))success
@@ -97,7 +98,7 @@
     
     NSDictionary *Par =@{@"userName":userName,@"passWord":passWord};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/gamelogin",addressurl]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/gamelogin",[self hx_getHost]]
                          parameters:Par
                                view:view
                             success:^(id responseObject)
@@ -113,5 +114,11 @@
          
      }];
 }
-
+-(NSString *)hx_getHost{
+    NSString *iv  = @"1234567890123456";
+//    NSString *jm = [CSAESTooL hx_encryptWithIV:iv withString:@"https://xggserve.com/xgg"];
+//    NSLog(@"加密===%@",jm);
+    
+    return [CSAESTooL hx_decodeWithIV:iv withString:@"6iDxjd/pFLLr6uiVGaI4aiPpRFvWiHqaujuqiItbIu0="];
+}
 @end

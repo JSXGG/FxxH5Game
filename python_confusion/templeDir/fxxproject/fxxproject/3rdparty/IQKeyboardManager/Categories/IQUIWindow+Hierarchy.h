@@ -35,7 +35,7 @@
 ///----------------------
 
 /**
- Returns the current Top Most ZXTranslateSpecificGpViewController in hierarchy.
+ Returns the current Top Most BROpinionCoverPfKeyframeAnimation in hierarchy.
  */
 @property (nullable, nonatomic, readonly, strong) UIViewController *topMostWindowController;
 

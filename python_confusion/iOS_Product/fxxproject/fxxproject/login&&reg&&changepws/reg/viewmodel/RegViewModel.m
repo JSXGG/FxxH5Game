@@ -26,7 +26,7 @@
 
  @param Vc 当前视图控制器
  */
--(void)postRegdata:(RegViewController *)Vc{
+-(void)POSTRegdata:(RegViewController *)Vc{
     if (Vc.UserpswField.text.length==0) {
         [MBProgressHUD showError:@"账号不能为空" toView:Vc.view];
     }else if (Vc.UsernameField.text.length<6){

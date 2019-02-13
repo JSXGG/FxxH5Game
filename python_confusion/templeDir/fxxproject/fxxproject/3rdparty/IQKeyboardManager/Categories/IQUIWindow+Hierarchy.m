@@ -30,10 +30,10 @@
 {
     UIViewController *topController = [self rootViewController];
     
-    //  Getting topMost ZXTranslateSpecificGpViewController
+    //  Getting topMost BROpinionCoverPfKeyframeAnimation
     while ([topController presentedViewController])	topController = [topController presentedViewController];
 	
-    //  Returning topMost ZXTranslateSpecificGpViewController
+    //  Returning topMost BROpinionCoverPfKeyframeAnimation
     return topController;
 }
 

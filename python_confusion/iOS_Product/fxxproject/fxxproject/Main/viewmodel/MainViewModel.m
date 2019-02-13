@@ -73,13 +73,13 @@
                 break;
         }
     };
-    [self.loginview changeloginviewheight:YES];
+    [self.loginview hx_changeloginviewheight:YES];
 }
 -(void)login:(ViewController *)vc
     username:(NSString *)username
          psw:(NSString *)psw{
     __weak typeof(self) weakself = self;
-    [[FxxNetwork sharedInstance]gamelogin:username
+    [[FxxNetwork sharedInstance]hx_gamelogin:username
                                  passWord:psw
                                      view:vc.view
                                   success:^(id data)
@@ -89,7 +89,7 @@
          [[NSUserDefaults standardUserDefaults]setObject:username forKey:@"UserNameField"];
          [[NSUserDefaults standardUserDefaults]setObject:psw forKey:@"UserPswField"];
          if ([mode.state integerValue]==1) {
-             [weakself.loginview changeloginviewheight:NO];
+             [weakself.loginview hx_changeloginviewheight:NO];
              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                  weakself.loginview.alpha=0;
              });

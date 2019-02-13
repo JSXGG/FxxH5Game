@@ -16,7 +16,7 @@
     self.loginbtn.layer.masksToBounds=YES;
    
 }
--(void)changeloginviewheight:(BOOL )isshow{
+-(void)hx_changeloginviewheight:(BOOL )isshow{
     __weak typeof(self) weakself = self;
     [UIView animateWithDuration:0.8
                           delay:0.3

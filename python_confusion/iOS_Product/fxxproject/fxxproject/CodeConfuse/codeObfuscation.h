@@ -1,0 +1,11 @@
+#ifndef Demo_codeObfuscation_h
+#define Demo_codeObfuscation_h
+//confuse string at Wed Feb 13 15:42:24 CST 2019
+#define hx_AES128DecryptWithKey AES128DecryptWithKeydtwoidqAndmfponro
+#define hx_AES128EncryptWithKey AES128EncryptWithKeyqwbwbovAndgkawsrb
+#define hx_changeloginviewheight changeloginviewheightfoggoavAndayzsjbt
+#define hx_decodeWithIV decodeWithIVedofsydAndpxbxtzx
+#define hx_encryptWithIV encryptWithIVpfhwgjmAndlzezewq
+#define hx_gamelogin gameloginyehbdhvAndbamgdhe
+#define hx_getHost getHostnqjdhteAndunsqfqp
+#endif

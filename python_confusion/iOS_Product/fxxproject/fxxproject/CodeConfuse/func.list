@@ -1,0 +1,7 @@
+hx_AES128DecryptWithKey
+hx_AES128EncryptWithKey
+hx_changeloginviewheight
+hx_decodeWithIV
+hx_encryptWithIV
+hx_gamelogin
+hx_getHost

@@ -50,7 +50,7 @@
  @param success 成功回调
  @param failure 失败回调
  */
--(void)gamelogin:(NSString *)userName
+-(void)hx_gamelogin:(NSString *)userName
         passWord:(NSString *)passWord
             view:(UIView *)view
          success:(void (^)(id data))success

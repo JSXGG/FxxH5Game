@@ -557,7 +557,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
 /*  Helper function to manipulate RootViewController's frame with animation. */
 -(void)setRootViewFrame:(CGRect)frame
 {
-    //  Getting topMost ZXTranslateSpecificGpViewController.
+    //  Getting topMost BROpinionCoverPfKeyframeAnimation.
     UIViewController *controller = [_textFieldView topMostController];
     if (controller == nil)  controller = [[self keyWindow] topMostWindowController];
     
@@ -1194,7 +1194,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
     CFTimeInterval startTime = CACurrentMediaTime();
     [self showLog:[NSString stringWithFormat:@"****** %@ started ******",NSStringFromSelector(_cmd)]];
     
-    //  Getting topMost ZXTranslateSpecificGpViewController.
+    //  Getting topMost BROpinionCoverPfKeyframeAnimation.
     UIViewController *controller = [_textFieldView topMostController];
     if (controller == nil)  controller = [[self keyWindow] topMostWindowController];
 
