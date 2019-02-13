@@ -5,7 +5,8 @@ import helper
 def start(path):
     if (os.path.exists(path) == False):
         return
-
+    if ('Pods' in path):
+        return
     with open(path, 'r', encoding="utf-8") as f:
         list = f.readlines()
         needInserts = []

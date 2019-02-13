@@ -51,6 +51,8 @@ def classHasInit(path):
 
 # 移除上一次插入的垃圾代码
 def cleanCode(path, tag1, tag2):
+    if ('Pods' in path):
+        return
     with open(path, "r+") as f:
         f_list = f.readlines()
         f_list = removeCodeWithAry(f_list, tag1, tag2)
@@ -77,6 +79,8 @@ def cleanCode(path, tag1, tag2):
 # 插入代码到文件。
 def insertCodeToFile(path, code):
     if (os.path.exists(path) == False):
+        return
+    if ('Pods' in path):
         return
     with open(path, "r+") as f:
         fileList = f.readlines()

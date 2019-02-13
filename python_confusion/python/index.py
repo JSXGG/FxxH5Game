@@ -21,17 +21,8 @@ pro_qz_str = helper.getRandomStrWithOption(2, -1).upper()
 
 # 过滤的类。
 filterClassNames = ['AppDelegate']
-
-filterClassDirs = ['MBProgressHUD',
-                   'AFNetworking',
-                   'MJExtension',
-                   'IQKeyboardManager',
-                   'Categories',
-                   'Constants',
-                   'IQTextView',
-                   'IQToolbar',
-                   'Resources',
-                   'Base64']
+# 过滤的目录
+filterClassDirs = ['Base64']
 
 
 def getClassName():
@@ -83,6 +74,10 @@ def start2(rootDir):
         return
     for filename in os.listdir(rootDir):
         pathname = os.path.join(rootDir, filename)
+
+        if ('Pods' in pathname):
+            continue
+
         if (os.path.isfile(pathname)):
             if '.h' in filename or '.swift' in filename:
                 # 过滤器处理
@@ -114,6 +109,7 @@ def start2(rootDir):
 
                 # 更改工程。
                 changeXcodepro(getXcodeprojPath(pro_root_dir), oldFileName, newFileName)
+                # print ('123123123',dir)
                 # 更改其它类的调用。
                 changeFeference(pro_root_dir, oldFileName, newFileName)
 
@@ -207,6 +203,10 @@ def changeXcodepro(proj_path, oldName, newName):
 def changeFeference(rootDir, oldName, newName):
     for filename in os.listdir(rootDir):
         pathname = os.path.join(rootDir, filename)
+
+        if('Pods' in pathname):
+            continue
+        # print ('------', pathname)
         if (os.path.isfile(pathname)):
             if ('.h' in pathname) or ('.m' in pathname) or ('.pch' in pathname) or ('.swift' in pathname) or (
                     '.xib' in pathname) or ('.storyboard' in pathname):
