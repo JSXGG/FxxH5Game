@@ -1,5 +1,6 @@
 hx_AES128DecryptWithKey
 hx_AES128EncryptWithKey
+hx_Regisdevicebygame
 hx_changeloginviewheight
 hx_decodeWithIV
 hx_encryptWithIV

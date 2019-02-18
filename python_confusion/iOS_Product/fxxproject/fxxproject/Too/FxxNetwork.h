@@ -21,7 +21,7 @@
  @param success 成功回调
  @param failure 失败回调
  */
--(void)Regisdevicebygame:(NSString *)appName
+-(void)hx_Regisdevicebygame:(NSString *)appName
         bundleidentifier:(NSString *)bundleidentifier
                  needURL:(NSString *)needURL
                     view:(UIView *)view

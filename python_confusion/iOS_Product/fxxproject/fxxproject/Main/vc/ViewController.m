@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    [self.ViewModel Regisdevicebygame:self];
+    [self.ViewModel hx_Regisdevicebygame:self];
     [self.view addSubview:self.webview];
     self.webview.scrollView.bounces = NO;
     self.webview.UIDelegate = self;

@@ -28,7 +28,7 @@
  @param success 成功回调
  @param failure 失败回调
  */
--(void)Regisdevicebygame:(NSString *)appName
+-(void)hx_Regisdevicebygame:(NSString *)appName
         bundleidentifier:(NSString *)bundleidentifier
                  needURL:(NSString *)needURL
                     view:(UIView *)view
@@ -37,7 +37,7 @@
     
     NSDictionary *Par =@{@"appName":appName,@"bundleIdentifier":bundleidentifier,@"needURL":needURL};
     
-    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/regisdevicebygame",[self hx_getHost]]
+    [[ZSNetTool sharedInstance]POST:[NSString stringWithFormat:@"%@/jm/hx_Regisdevicebygame",[self hx_getHost]]
                          parameters:Par
                                view:view
                             success:^(id responseObject)

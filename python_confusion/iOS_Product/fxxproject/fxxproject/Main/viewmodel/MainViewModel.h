@@ -13,6 +13,6 @@
 @interface MainViewModel : NSObject
 @property (strong,nonatomic) MainModel *Model;
 @property (strong,nonatomic) LoginView *loginview;
--(void)Regisdevicebygame:(ViewController *)Vc;
--(void)Getloginview:(ViewController *)Vc;
+-(void)hx_Regisdevicebygame:(ViewController *)Vc;
+-(void)hx_Getloginview:(ViewController *)Vc;
 @end

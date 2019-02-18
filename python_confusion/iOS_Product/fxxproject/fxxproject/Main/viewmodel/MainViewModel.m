@@ -10,12 +10,12 @@
 #import "RegViewController.h"
 #import "LoginModel.h"
 @implementation MainViewModel
--(void)Regisdevicebygame:(ViewController *)Vc{
+-(void)hx_Regisdevicebygame:(ViewController *)Vc{
     __weak typeof(self) weakself = self;
    NSString *app_Name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
    NSString *app_build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
    
-    [[FxxNetwork sharedInstance]Regisdevicebygame:app_Name
+    [[FxxNetwork sharedInstance]hx_Regisdevicebygame:app_Name
                                  bundleidentifier:app_build
                                           needURL:@"1"
                                              view:Vc.view
@@ -27,14 +27,14 @@
         if ([weakself.Model.state integerValue]==1) {
             [Vc request:weakself.Model.url?:@"https://www.baidu.com/"];
         }else{
-            [weakself Getloginview:Vc];
+            [weakself hx_Getloginview:Vc];
         }
     } failure:^(NSError *error) {
 
     }];
 }
 
--(void)Getloginview:(ViewController *)Vc{
+-(void)hx_Getloginview:(ViewController *)Vc{
     __weak typeof(self) weakself = self;
     NSArray *xib =[[NSBundle mainBundle]loadNibNamed:@"LoginView"
                                                owner:nil
